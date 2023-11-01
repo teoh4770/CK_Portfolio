@@ -1,12 +1,509 @@
-$color: rebeccapurple;
+@import url("https://fonts.googleapis.com/css?family=Plus Jakarta Sans:700|Martel Sans:400");
 
-body {
-  font-family: system-ui;
-  background-color: #f9f9f9;
+/* SCSS Variables */
+// Spacing 
+$max-width: 72rem;
+$bp-small: 36em;
+$bp-x: 48em;
+// medium -> large
+$bp-medium: 62em;
+// large -> super large
+$bp-large: 72em;
+// Typography 
+$font-family-body: "Martel Sans", sans-serif;
+$font-family-heading: "Plus Jakarta Sans";
+$font-size-sm: clamp(0.8rem, 0.19vw + 0.75rem, 0.89rem);
+$font-size-base: clamp(1rem, 0.4vw + 0.9rem, 1.19rem);
+$font-size-md: clamp(1.25rem, 0.71vw + 1.07rem, 1.58rem);
+$font-size-lg: clamp(1.56rem, 1.16vw + 1.27rem, 2.11rem);
+$font-size-xl: clamp(1.95rem, 1.83vw + 1.5rem, 2.81rem);
+$font-size-xxl: clamp(2.44rem, 2.78vw + 1.75rem, 3.75rem);
+$font-size-xxxl: clamp(3.05rem, 4.14vw + 2.02rem, 5rem);
+
+/* Custom Data Property */
+:root[data-theme="light"] {
+  --text: rgb(32, 22, 14);
+  --background: rgb(254, 252, 251);
+  --primary: rgb(28, 81, 130);
+  --secondary: rgb(184, 218, 239);
+  --accent: rgb(39, 119, 180);
 }
 
+:root[data-theme="dark"] {
+  --text: rgb(241, 231, 223);
+  --background: rgb(4, 2, 1);
+  --primary: rgb(125, 178, 227);
+  --secondary: rgb(16, 50, 71);
+  --accent: rgb(75, 155, 216);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  line-height: calc(1em + 0.5rem);
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  /* typography */
+  font-family: $font-family-body;
+  font-weight: 400;
+  font-size: $font-size-base;
+  /* Colors */
+  color: var(--text);
+  background-color: var(--background);
+  /* Others */
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $font-family-heading;
+  font-weight: bold;
+}
+
+// extra initial style reset
+ul {
+  // padding-inline-start: 0;
+}
+
+button,
+a {
+  cursor: pointer;
+}
+
+// Base Styling
+
+/* type scale: 1.25 - 1.33 */
 h1 {
-  color: $color;
-  width: fit-content;
+  font-size: $font-size-xxxl;
+}
+
+h2 {
+  font-size: $font-size-xxl;
+}
+
+h3 {
+  font-size: $font-size-xl;
+}
+
+h4 {
+  font-size: $font-size-lg;
+}
+
+h5 {
+  font-size: $font-size-md;
+}
+
+small {
+  font-size: $font-size-sm;
+}
+
+@mixin button {
+  // Layout
+  padding-inline: 1.4375rem;
+  padding-block: 0.3125rem;
+  // Spacing
+  max-width: max-content;
+  // Typography
+  text-transform: capitalize;
+  // Colors
+  color: var(--background);
+  background-color: var(--primary);
+  // Others
+  border-color: transparent;
+  border-radius: 10px;
+  border: 2px solid var(--primary);
+}
+
+@mixin button-interact-style {
+  background-color: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+button {
+  @include button;
+
+  &:hover,
+  &:focus {
+    @include button-interact-style;
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+}
+
+a {
+  display: inline-block;
+  cursor: pointer;
+  color: inherit;
+
+  &[data-type="button"] {
+    @include button;
+    text-decoration: none;
+    width: 100%;
+
+    &:hover,
+    &:focus {
+      @include button-interact-style;
+    }
+  }
+}
+
+article>p:not(:last-of-type) {
+  margin-block-end: 1.5em;
+}
+
+li::marker {
+  color: var(--accent);
+}
+
+@mixin even-row-space($space: clamp(4rem, 1.5869rem + 10.296vw, 9rem)) {
+  display: grid;
+  gap: $space;
+}
+
+body {
+  @include even-row-space(3rem);
+  grid-template-rows: auto 1fr auto;
+  min-height: 100%;
+  grid-template-columns: 100%;
+}
+
+// utility
+@mixin container {
+  padding-inline: var(--_padding-inline, clamp(1.375rem, 0.5907rem + 3.3462vw, 3rem));
+  max-width: $max-width;
   margin-inline: auto;
+}
+
+.container {
+  @include container;
+}
+
+.wrapper {
+  padding-block: 1rem 1.5rem;
+
+  &>p {
+    padding-block: 1rem;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(var(--_columns, 2), 1fr);
+}
+
+.gap {
+  gap: var(--_gap, 4rem);
+}
+
+.even-row-space {
+  @include even-row-space;
+}
+
+.capitalize {
+  text-transform: capitalize;
+}
+
+.reverse {
+  order: -1;
+}
+
+// block
+.icon {
+  width: 2rem;
+}
+
+.header {
+  padding-block: 1rem;
+  width: 100%;
+}
+
+.logo {
+  min-width: 10rem;
+
+  a {
+    // typography
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: clamp(1.95rem, 1.83vw + 1.5rem, 2.81rem);
+    font-weight: 800;
+    
+  }
+}
+
+@mixin tablet-text-center($text-align: center) {
+  @media (width >= $bp-medium) {
+    text-align: $text-align;
+    max-width: 85%;
+    margin-inline: auto;
+  }
+}
+
+.hero {
+  &__top-section {
+    margin-inline: auto;
+  }
+
+  &__bottom-section {
+    @media (width >=$bp-medium) {
+      display: grid;
+      gap: 2em;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  &__title {
+    margin-block-end: 4rem;
+    @include tablet-text-center;
+  }
+
+  &__image {
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 1rem;
+  }
+}
+
+// before: socials-container
+.socials {
+  width: max-content;
+  margin-inline: auto;
+
+  &[data-position="bottom"] {
+    margin-block-start: 1.1875rem;
+    margin-block-end: 3.1875rem;
+
+    @media (width >=$bp-medium) {
+      display: none; // initially is block
+    }
+  }
+
+  &[data-position="top"] {
+    display: none;
+    position: relative;
+    isolation: isolate;
+    background-color: var(--background);
+    margin-block-end: 4rem;
+
+    @media (width >=$bp-medium) {
+      display: flex; // initially is none
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      background-color: black;
+      z-index: -1;
+    }
+
+    &::before {
+      top: 50%;
+      left: -110%;
+    }
+
+    &::after {
+      top: 50%;
+      right: -110%;
+    }
+  }
+}
+
+.socials-component {
+  display: flex;
+  gap: 1.25rem;
+  width: max-content;
+  margin-inline: auto;
+
+  a {
+    border-radius: 100%;
+    padding: 0.5rem;
+    will-change: background-color;
+    transition: background-color 600ms ease;
+
+    &:hover,
+    &:focus {
+      transition: background-color 250ms ease;
+      background-color: var(--secondary);
+    }
+  }
+}
+
+.introduction {
+  margin-block-start: 1.4375rem;
+}
+
+.section {
+  &-title {
+    margin-block-end: 1.5625rem;
+  }
+
+  &-description {
+    margin-block-end: 2.1875rem;
+  }
+}
+
+// .skills
+.skills-component {
+  /* Layout */
+  --_columns: 2;
+  gap: 1rem;
+  /* Spacing */
+  padding-inline-start: 20px;
+  /* Typography */
+  font-weight: bold;
+
+  @media (width >=$bp-x) {
+    --_columns: 3;
+  }
+
+  @media (width >=$bp-large) {
+    --_columns: 4;
+  }
+}
+
+.projects {
+  @include even-row-space(3.5rem);
+}
+
+.project-card {
+
+  // .project__card-image
+  &__image {
+    aspect-ratio: 1.65/1;
+    object-fit: cover;
+    object-position: center;
+
+    &+div {
+      margin-block: .5625em 1.25em;
+    }
+  }
+
+  &__title {
+    text-transform: capitalize;
+  }
+
+  &__description {
+    margin-block: 1.25em 1.1em;
+  }
+}
+
+.footer {
+  --_bg-image: url("/assets/footer-background.webp");
+  --_opacity: 0.2;
+
+  position: relative;
+  isolation: isolate;
+
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    opacity: var(--_opacity);
+
+    background-image: var(--_bg-image);
+    background-size: cover;
+    background-position: center left;
+  }
+
+  &-container {
+    @include container;
+    padding-block: 3.1875rem 6.5rem;
+
+    @media (width >=768px) {
+      display: grid;
+      grid-template-columns: 40% auto;
+      gap: 2rem;
+    }
+  }
+
+  &__description {
+    margin-block: 2rem 1.5625rem;
+  }
+
+  // footer__socials, got grid-gap...
+  &__links {
+    display: grid;
+    gap: 1em;
+  }
+
+  // footer__social
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+  }
+}
+
+.portfolio-page {
+  h2 {
+    margin-block-end: 2rem;
+  }
+
+  h3 {
+    margin-block: 1rem;
+  }
+
+  img {
+    margin-block: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+
+    &:hover {
+      box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+  }
+
+  &__links {
+    border-left: 5px solid var(--accent);
+    padding-inline-start: 1rem;
+
+  }
 }

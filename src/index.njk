@@ -30,16 +30,12 @@ layout: "base.njk"
       >
 
       <div class="socials" data-position="bottom">
-        <div class="socials-component">
-           <a href="#">
-            <img class="icon" src="/assets/icons/linkedin.svg" alt="linkedin">
-          </a>
-          <a href="#">
-            <img class="icon" src="/assets/icons/github.svg" alt="github">
-          </a>
-          <a href="#">
-            <img class="icon" src="/assets/icons/file-account.svg" alt="resume">
-          </a>
+        <div class="socials-component" >
+          {%- for social in data.socials -%}
+            <a href="{{social.link}}" target="_blank">
+              <img class="social__icon icon" src="{{social.icon}}" alt="{{social.socialName}}">
+            </a>
+          {%- endfor -%}
         </div>
       </div>
 

@@ -45,7 +45,7 @@ function setButtonState(length) {
   const $introButtons = $body.querySelectorAll(".intro-button");
   const className = "clicked";
 
-  if (!$introButtons) return;
+  if ($introButtons.length === 0) return;
   $introButtons.forEach(($button)=> {
     $button.classList.remove(className);
 
@@ -59,7 +59,7 @@ function setButtonState(length) {
 function setEventListeners() {
   const $introButtons = $body.querySelectorAll(".intro-button");
 
-  if (!$introButtons) return;
+  if ($introButtons.length === 0) return;
   $introButtons.forEach(($button) => {
     $button.addEventListener("click", function () {
       setIntroductionLength(this.id);

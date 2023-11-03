@@ -8,7 +8,7 @@ const introductions = {
   long: `
   <p>Hi, I'm Chee, a 21-year-old Computer Science student at Wilfrid Laurier University in Canada.</p>
 
-  <p>At 17, I wasn't sure about my future. I talked with my family and realized I always liked computers. I tried learning "data science" with a long Udemy course, but it didn't excite me.</p>
+  <p>At 17, I wasn't sure about my future. I talked with my family and realized I always liked computers. I tried learning data science with a long Udemy course, but it didn't excite me.</p>
   
   <p>However, I found that I really enjoyed the programming part of the course. It was different from my other studies because I got instant feedback from the programs I made. So, I decided to study Computer Science.</p>
   

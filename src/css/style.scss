@@ -251,6 +251,11 @@ body {
   order: -1;
 }
 
+.clicked {
+  @include button-interact-style;
+}
+
+
 // block
 .icon {
   width: 2rem;

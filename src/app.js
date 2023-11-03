@@ -38,6 +38,22 @@ function setIntroductionLength(length) {
   if (!$introduction || !introductions[length]) return;
 
   $introduction.innerHTML = introductions[length];
+  setButtonState(length);
+}
+
+function setButtonState(length) {
+  const $introButtons = $body.querySelectorAll(".intro-button");
+  const className = "clicked";
+
+  if (!$introButtons) return;
+  $introButtons.forEach(($button)=> {
+    $button.classList.remove(className);
+
+    if ($button.id === length) {
+      $button.classList.add(className);
+    }
+  })
+
 }
 
 function setEventListeners() {

@@ -3,7 +3,7 @@ title: Working at Nfinite
 tags: ["project", "featured"]
 image: /assets/portfolio/portfolio3/thumbnail.webp
 imageAlt: the screenshot of my first 5 favorites projects
-description: Read about my first internship experience at Nfinite Nanotech, an startup advanced material company that makes smart nanocoatings for sustainable packaging
+description: Read about my first internship experience at Nfinite Nanotech, a startup advanced material company that makes smart nanocoatings for sustainable packaging
 buttonText: Read Story
 ---
 

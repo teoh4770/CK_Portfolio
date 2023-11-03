@@ -4,108 +4,70 @@ layout: "base.njk"
 ---
 
 {# here setting the metadata for index page #}
-
-  <!-- hero section -->
-  <section class="hero container">
-    <div class="hero__top-section">
-      <h1 class="hero__title">
-        Frontend Developer, Sophomore and Passionate Introvert
-      </h1>
-      <div class="socials" data-position="top">
-        <div class="socials-component" >
-          {%- for social in data.socials -%}
-            <a href="{{social.link}}" target="_blank">
-              <img class="social__icon icon" src="{{social.icon}}" alt="{{social.socialName}}">
-            </a>
+<!-- hero section -->
+  <section class="hero container"> <div class="hero__top-section">
+    <h1 class="hero__title">
+      Frontend Developer, Sophomore and Passionate Introvert
+    </h1>
+    <div class="socials" data-position="top">
+      <div class="socials-component">
+        {%- for social in data.socials -%}
+          <a href="{{ social.link }}" target="_blank">
+            <img class="social__icon icon" src="{{ social.icon }}" alt="{{ social.socialName }}"></a>
           {%- endfor -%}
         </div>
       </div>
     </div>
     <div class="hero__bottom-section">
-
-      <img 
-        class="hero__image" 
-        src="/assets/profile-image.webp" 
-        alt="my profile image"
-      >
-
-      <div class="socials" data-position="bottom">
-        <div class="socials-component" >
-          {%- for social in data.socials -%}
-            <a href="{{social.link}}" target="_blank">
-              <img class="social__icon icon" src="{{social.icon}}" alt="{{social.socialName}}">
-            </a>
-          {%- endfor -%}
-        </div>
-      </div>
-
-      <div class="reverse">
-        {# the control #}
-        {# <button>short</button> #}
-        {# <button>long</button> #}
-        <article class="introduction">
-          <p>Hey there! I'm Chee Kian Teoh, a 21-year-old sophomore majoring in Computer Science at Wilfrid Laurier University
-            in
-            the cozy town of Waterloo, Canada.</p>
-          <p>My journey into the programming world kicked off when I was 17, in the midst of some classic teenage
-            confusion about my future. I couldn't nail down a major that truly sparked my interest. After some
-            heart-to-heart chats with my family, it dawned on me that I'd always been kind of a computer geek. So, I
-            initially thought, "Why not try 'data science'?" My big bro kindly bought me this epic, 30+ hour
-            introductory
-            data science course on Udemy. But surprise, surprise, it turned out to be a total buzzkill for my data
-            science
-            dreams.</p>
-          <p>The silver lining in this story, though, was that I found the coding part of that course super rad. I
-            dipped
-            my toes into Python, and it was like finding my long-lost twin. The way I learned and got instant feedback
-            from the programs I created was a game-changer. That's when I made the big move to dive headfirst into the
-            world of Computer Science.</p>
-          <p>It also hit me that I have a knack for problem-solving and creating cool stuff from scratch. So, I
-            naturally
-            veered into the self-taught realm of web development as a starting point. It's like I stumbled upon a
-            superpower I never knew I had, building things from scratch.</p>
-          <p>Since then, I've been juggling my Computer Science studies with my self-taught web development
-            adventures.
-            This path also landed me a gig with a startup's engineering team, where I got to lead a frontend project
-            and
-            cook up a slick user interface for a machine. It's been quite the ride! 😄</p>
-        </article>
-      </div>
-    </div>
-  </section>
-  <!-- skill section: title, a short description of how i learn these skills and a skills grid -->
-  <section class="skill container">
-    <h3 class="section-title">My Skills</h3>
-    <p class="section-description">During my self-taught journey, I’ve taken a number of online courses such as
-      JavaScript 30, JavaScript Deep
-      Dive, BeyondCSS: Sass Fundamental, and I’m currently taking JavaScript: The Hard Part.</p>
-    <ul class="skills-component grid">
-      <li>HTML5</li>
-      <li>CSS3</li>
-      <li>JavaScript ES6</li>
-      <li>TypeScript</li>
-      <li>React</li>
-      <li>Sass</li>
-      <li>Angular</li>
-      <li>Git</li>
-    </ul>
-  </section>
-  <!-- project section: title, a short description, and 3 - 5 projects showcase-->
-  <section class="container">
-    <h3 class="section-title">What I have been working on</h3>
-    <p class="section-description">I like to spend my free time learning and doing project. Take a look at some of the
-      applications and webpages I
-      dedicated my time to.</p>
-    <div class="projects">
-      {%- for project in collections.project -%}
-        <article class="project-card">
-          <img class="project-card__image" src="{{project.data.image}}" alt="{{project.data.imageAlt}}">
-          <div>
-            <h4 class="project-card__title">{{project.data.title}}</h4>
-            <p class="project-card__description">{{project.data.description}}</p>
-            <a data-type="button" href="{{project.url}}">{{project.data.buttonText}} ></a>
+      <img class="hero__image" src="/assets/profile-image.webp" alt="my profile image">
+        <div class="socials" data-position="bottom">
+          <div class="socials-component">
+            {%- for social in data.socials -%}
+              <a href="{{ social.link }}" target="_blank">
+                <img class="social__icon icon" src="{{ social.icon }}" alt="{{ social.socialName }}"></a>
+              {%- endfor -%}
+            </div>
           </div>
-        </article>
-      {%- endfor -%}
-    </div>
-  </section>
+          <div
+            class="reverse">
+            {# the control #}
+            <button class="intro-button clicked" id="short">short</button>
+            <button class="intro-button" id="long">long</button>
+            <article class="introduction"></article>
+          </div>
+        </div>
+      </section>
+      <!-- skill section: title, a short description of how i learn these skills and a skills grid -->
+      <section class="skill container">
+        <h3 class="section-title">My Skills</h3>
+        <p class="section-description">During my self-taught journey, I’ve taken a number of online courses such as JavaScript
+          30, JavaScript Deep Dive, BeyondCSS: Sass Fundamental, and I’m currently taking JavaScript: The Hard Part.</p>
+        <ul class="skills-component grid">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript ES6</li>
+          <li>TypeScript</li>
+          <li>React</li>
+          <li>Sass</li>
+          <li>Angular</li>
+          <li>Git</li>
+        </ul>
+      </section>
+      <!-- project section: title, a short description, and 3 - 5 projects showcase-->
+      <section class="container">
+        <h3 class="section-title">What I have been working on</h3>
+        <p class="section-description">I like to spend my free time learning and doing project. Take a look at some of the
+          applications and webpages I dedicated my time to.</p>
+        <div class="projects">
+          {%- for project in collections.project -%}
+            <article class="project-card">
+              <img class="project-card__image" src="{{ project.data.image }}" alt="{{ project.data.imageAlt }}">
+                <div>
+                  <h4 class="project-card__title">{{ project.data.title }}</h4>
+                  <p class="project-card__description">{{ project.data.description }}</p>
+                  <a data-type="button" href="{{ project.url }}">{{ project.data.buttonText }} ></a>
+                </div>
+              </article>
+            {%- endfor -%}
+          </div>
+        </section>

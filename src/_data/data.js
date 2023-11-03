@@ -4,7 +4,7 @@ module.exports = {
       socialName: "Linkedin",
       icon: "/assets/icons/linkedin.svg",
       link: "https://www.linkedin.com/in/cheekianteoh/",
-      alias: "@cheekian0306"
+      alias: "@cheekian0306",
     },
     {
       socialName: "Github",
@@ -16,7 +16,7 @@ module.exports = {
       socialName: "Resume",
       icon: "/assets/icons/file-account.svg",
       link: "https://www.shoto.at/l/resume",
-      alias: "See My Resume"
-    }
+      alias: "See My Resume",
+    },
   ]
-}
+};

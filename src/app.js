@@ -1,43 +1,30 @@
 // global
-const introLength = "short";
 const introductions = {
   short: `
-  <p>I'm Chee Kian Teoh, a 21-year-old computer science student at Wilfrid Laurier University in Waterloo, Canada.</p>
-  <p>When I was 17, I was unsure about my future career. My family helped me realize my interest in computers. I tried a data science course on Udemy but didn't like it. However, I discovered a passion for coding.</p>
-  <p>I found joy in problem-solving and creating things from scratch. I started learning web development on my own. I also got a job with a startup, leading a project to create a cool user interface for a machine. It's been a great journey! 😄</p>`,
-  long: `
-  <p>Hi, I'm Chee, a 21-year-old Computer Science student at Wilfrid Laurier University in Canada.</p>
+  <p>Hello there! I'm Chee Kian Teoh, a frontend developer who takes joy in solving problems and building things from the ground up. I taught myself web development and landed a job with a startup, where I lead a project to create a cool user interface for a machine. It's been an amazing journey! 😄</p>
 
-  <p>At 17, I wasn't sure about my future. I talked with my family and realized I always liked computers. I tried learning data science with a long Udemy course, but it didn't excite me.</p>
-  
-  <p>However, I found that I really enjoyed the programming part of the course. It was different from my other studies because I got instant feedback from the programs I made. So, I decided to study Computer Science.</p>
-  
-  <p>I also discovered that I enjoy problem-solving and creating things. I started by teaching myself web development, and it felt like I had a superpower to build things from scratch.</p>
-  
-  <p>Now, I'm balancing my Computer Science studies with self-taught web development. I even got a job with a startup's engineering team, where I led a project to create a user interface for a machine. It's been an exciting journey! 😄</p>
-  `,
-}
+  <p>My core values are be caring, be curious, and have desire to improve. Tech is a scary industry to jump into, but my eagerness to improve allow me to adapt to different challenges. As long as I am a frontend developer, my goal is to continue learning and practicing so that I can be a valuable team player in any environment.</p>
+ `,
+};
 
 // selectors
 const $body = document.querySelector("body");
 app();
 
-
-
 // initialize here
 function app() {
-  setIntroductionLength(introLength);
+  setIntroductionLength();
   setEventListeners();
 }
 
 // setters
-function setIntroductionLength(length) {
+function setIntroductionLength() {
   const $introduction = $body.querySelector(".introduction");
 
-  if (!$introduction || !introductions[length]) return;
+  if (!$introduction || !introductions["short"]) return;
 
-  $introduction.innerHTML = introductions[length];
-  setButtonState(length);
+  $introduction.innerHTML = introductions["short"];
+  setButtonState("short");
 }
 
 function setButtonState(length) {
@@ -45,14 +32,13 @@ function setButtonState(length) {
   const className = "clicked";
 
   if ($introButtons.length === 0) return;
-  $introButtons.forEach(($button)=> {
+  $introButtons.forEach(($button) => {
     $button.classList.remove(className);
 
     if ($button.id === length) {
       $button.classList.add(className);
     }
-  })
-
+  });
 }
 
 function setEventListeners() {
@@ -69,4 +55,3 @@ function setEventListeners() {
 // getters
 
 // Testing
-

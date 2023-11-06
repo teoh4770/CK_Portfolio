@@ -7,7 +7,7 @@ layout: "base.njk"
 <!-- hero section -->
   <section class="hero container"> <div class="hero__top-section">
     <h1 class="hero__title">
-      Frontend Developer, Sophomore and Passionate Introvert
+      A Frontend Developer strives to improve people's relationship with tech for a better community
     </h1>
     <div class="socials" data-position="top">
       <div class="socials-component">
@@ -32,7 +32,6 @@ layout: "base.njk"
             class="reverse">
             {# the control #}
             <button class="intro-button clicked" id="short">short</button>
-            <button class="intro-button" id="long">long</button>
             <article class="introduction"></article>
           </div>
         </div>
@@ -56,10 +55,9 @@ layout: "base.njk"
       <!-- project section: title, a short description, and 3 - 5 projects showcase-->
       <section class="container">
         <h3 class="section-title">What I have been working on</h3>
-        <p class="section-description">I like to spend my free time learning and doing project. Take a look at some of the
-          applications and webpages I dedicated my time to.</p>
+        <p class="section-description">I like to spend my free time learning and doing project. Take a look at some of the works I dedicated my time to.</p>
         <div class="projects">
-          {%- for project in collections.project -%}
+          {%- for project in collections.project | reverse -%}
             {% include 'project-snippet.njk' %}
           {%- endfor -%}
         </div>

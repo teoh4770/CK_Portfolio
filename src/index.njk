@@ -60,14 +60,7 @@ layout: "base.njk"
           applications and webpages I dedicated my time to.</p>
         <div class="projects">
           {%- for project in collections.project -%}
-            <article class="project-card">
-              <img class="project-card__image" src="{{ project.data.image }}" alt="{{ project.data.imageAlt }}">
-                <div>
-                  <h4 class="project-card__title">{{ project.data.title }}</h4>
-                  <p class="project-card__description">{{ project.data.description }}</p>
-                  <a data-type="button" href="{{ project.url }}">{{ project.data.buttonText }} ></a>
-                </div>
-              </article>
-            {%- endfor -%}
-          </div>
-        </section>
+            {% include 'project-snippet.njk' %}
+          {%- endfor -%}
+        </div>
+      </section>

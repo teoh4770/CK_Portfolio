@@ -1,6 +1,6 @@
 ---
 title: Makeup Artist Portfolio Website
-tags: ["project", "featured"]
+tags: ["project"]
 image: /assets/portfolio/portfolio1/thumbnail.webp
 imageAlt: the overview of makeup artist portfolio websiite
 description: This project is a makeup artist portfolio website that I made for my sister to showcase her work, skills, and services. This site features landing page, portfolio page, and profile page.

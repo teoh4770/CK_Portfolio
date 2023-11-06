@@ -20,7 +20,6 @@ const introductions = {
 
 // selectors
 const $body = document.querySelector("body");
-
 app();
 
 
@@ -68,3 +67,6 @@ function setEventListeners() {
 }
 
 // getters
+
+// Testing
+

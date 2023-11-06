@@ -1,6 +1,6 @@
 ---
 title: Personal Projects
-tags: ["project", "featured"]
+tags: ["project"]
 image: /assets/portfolio/portfolio2/thumbnail.webp
 imageAlt: the screenshot of my first 5 favorites projects
 description: Compilation of frontendmentor.io and frontendpractice.com challenges coded by me ʕ•́ᴥ•̀ʔっ♡

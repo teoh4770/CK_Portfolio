@@ -15,8 +15,8 @@ module.exports = {
     {
       socialName: "Resume",
       icon: "/assets/icons/file-account.svg",
-      link: "https://www.shoto.at/l/cheekianteoh/resume",
+      link: "https://drive.google.com/file/d/12DiZR_Fnvdu1sV5K4f9lrZb3PD0McKZC/view?usp=sharing",
       alias: "See My Resume",
     },
-  ]
+  ],
 };

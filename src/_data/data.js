@@ -15,7 +15,7 @@ module.exports = {
     {
       socialName: "Resume",
       icon: "/assets/icons/file-account.svg",
-      link: "https://drive.google.com/file/d/1XuvLbv3HLOQVwIGUH-O2GK5yD3pFpwaA/view?usp=sharing",
+      link: "https://drive.google.com/file/d/1-BjlJJKv9jsSSzmMlKmC2KaYJoCrarNF/view?usp=drive_link",
       alias: "See My Resume",
     },
   ],

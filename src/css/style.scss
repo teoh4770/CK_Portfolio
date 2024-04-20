@@ -156,6 +156,8 @@ small {
 
 @mixin button-hover {
   background-color: rgba(150 150 150 / .1);
+  outline: 1px solid var(--primary);
+  outline-offset: 2px;
 }
 
 @mixin button-clicked {

@@ -18,7 +18,7 @@ $font-size-md: clamp(1.25rem, 0.71vw + 1.07rem, 1.58rem);
 $font-size-lg: clamp(1.56rem, 1.16vw + 1.27rem, 2.11rem);
 $font-size-xl: clamp(1.95rem, 1.83vw + 1.5rem, 2.81rem);
 $font-size-xxl: clamp(2.44rem, 2.78vw + 1.75rem, 3.75rem);
-$font-size-xxxl: clamp(3.05rem, 4.14vw + 2.02rem, 5rem);
+$font-size-xxxl: clamp(2.5rem, 4.14vw + 2.02rem, 4rem);
 
 /* Custom Data Property */
 :root[data-theme="light"] {
@@ -115,7 +115,7 @@ a {
 
 /* type scale: 1.25 - 1.33 */
 h1 {
-  font-size: $font-size-xxxl;
+  font-size: $font-size-xxl;
 }
 
 h2 {
@@ -286,9 +286,9 @@ body {
   }
 }
 
-@mixin tablet-text-center($text-align: center) {
+@mixin tablet-text-center() {
   @media (width >= $bp-medium) {
-    text-align: $text-align;
+    text-align: center;
     max-width: 85%;
     margin-inline: auto;
   }

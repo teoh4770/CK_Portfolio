@@ -1,8 +1,9 @@
-<article class="project-card">
-  <img class="project-card__image" src="{{ project.data.image }}" alt="{{ project.data.imageAlt }}">
-  <div>
-    <h4 class="project-card__title">{{ project.data.title }}</h4>
+<article
+  class="project-card">
+  {# <img class="project-card__image" src="{{ project.data.image }}" alt="{{ project.data.imageAlt }}"> #}
+  <header class="project-card__infos">
+    <p class="project-card__title">{{ project.data.title }}</p>
     <p class="project-card__description">{{ project.data.description }}</p>
-    <a data-type="button" href="{{ project.url }}">{{ project.data.buttonText }} ></a>
-  </div>
+  </header>
+  <a class="project-card__cta" href="{{ project.url }}">{{ project.data.buttonText }} ></a>
 </article>

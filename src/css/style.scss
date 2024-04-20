@@ -14,7 +14,7 @@ $font-family-body: "Martel Sans", sans-serif;
 $font-family-heading: "Plus Jakarta Sans";
 $font-size-sm: clamp(0.8rem, 0.19vw + 0.75rem, 0.89rem);
 $font-size-base: clamp(1rem, 0.4vw + 0.9rem, 1.19rem);
-$font-size-md: clamp(1.25rem, 0.71vw + 1.07rem, 1.58rem);
+$font-size-md: clamp(1.125rem, 0.6vw + 1.0rem, 1.47rem);
 $font-size-lg: clamp(1.56rem, 1.16vw + 1.27rem, 2.11rem);
 $font-size-xl: clamp(1.95rem, 1.83vw + 1.5rem, 2.81rem);
 $font-size-xxl: clamp(2.44rem, 2.78vw + 1.75rem, 3.75rem);
@@ -102,7 +102,7 @@ h5 {
 }
 
 // extra initial style reset
-ul {
+ul[class] {
    padding-inline-start: 0;
 }
 
@@ -127,7 +127,7 @@ h3 {
 }
 
 h4 {
-  font-size: $font-size-lg;
+  font-size: $font-size-md;
 }
 
 h5 {
@@ -199,6 +199,11 @@ a {
       @include button-hover;
     }
   }
+
+  &:hover,
+  &:focus {
+    color: var(--accent)
+  }
 }
 
 article>p:not(:last-of-type) {
@@ -260,8 +265,6 @@ body {
 .reverse {
   order: -1;
 }
-
-
 
 // block
 .icon {
@@ -408,7 +411,7 @@ body {
   --_columns: 2;
   gap: 1rem;
   /* Spacing */
-  padding-inline-start: 20px;
+  padding-left: 20px !important;
   /* Typography */
   font-weight: bold;
 
@@ -422,29 +425,84 @@ body {
 }
 
 .projects {
-  @include even-row-space(3.5rem);
+  @include even-row-space(1rem);
 }
 
 .project-card {
 
   // .project__card-image
-  &__image {
-    aspect-ratio: 1.65/1;
-    object-fit: cover;
-    object-position: center;
+  // &__image {
+  //   aspect-ratio: 2.2 / 1;
+  //   // aspect-ratio: 1.65/1;
+  //   object-fit: contain;
+  //   object-position: left;
 
-    &+div {
-      margin-block: .5625em 1.25em;
-    }
+  //   &+div {
+  //     margin-block: .5625em 1.25em;
+  //   }
+  // }
+  position: relative;
+  padding: 1rem;
+
+  border: 1px solid;
+  border-radius: .5rem;
+
+  transition: all 0.3s ease;
+  
+
+  // &:hover,
+  // &:focus {
+  //   background-color: rgb(150 150 150 /.1);
+  // }
+
+  // card:hover {
+
+  //   box-shadow: -10px 10px 0 0 var(—primary)
+    
+  //   transform: translate(10px -10px);
+    
+  //   }
+
+  &:hover,
+  &:focus-visible {
+    $offset: .3125rem;
+
+    box-shadow: -$offset $offset 0 0 var(--primary);
+    transform: translate($offset, -$offset);
   }
 
   &__title {
     text-transform: capitalize;
+    font-weight: 600;
   }
 
   &__description {
-    margin-block: 1.25em 1.1em;
+    margin-top: 0.5rem;
+
+    font-size: 0.875rem;
+    line-height: 1.5rem;
   }
+
+  &__cta {
+    margin-top: 1rem;
+
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    color: var(--accent);
+  }
+
+  &__cta::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+  }
+
+
 }
 
 .footer {

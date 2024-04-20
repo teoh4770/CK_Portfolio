@@ -20,6 +20,8 @@ $font-size-xl: clamp(1.95rem, 1.83vw + 1.5rem, 2.81rem);
 $font-size-xxl: clamp(2.44rem, 2.78vw + 1.75rem, 3.75rem);
 $font-size-xxxl: clamp(2.5rem, 4.14vw + 2.02rem, 4rem);
 
+$navbar-height: 75px;
+
 /* Custom Data Property */
 :root[data-theme="light"] {
   --text: rgb(32, 22, 14);
@@ -309,8 +311,20 @@ body {
 }
 
 .header {
+  position:fixed;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   padding-block: 1rem;
   width: 100%;
+  min-height: $navbar-height;
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+.main-section {
+  padding-block-start: $navbar-height + 48px;
 }
 
 .logo {
@@ -322,7 +336,6 @@ body {
     text-transform: uppercase;
     font-size: clamp(1.95rem, 1.83vw + 1.5rem, 2.81rem);
     font-weight: 800;
-    
   }
 }
 
@@ -466,18 +479,6 @@ body {
 }
 
 .project-card {
-
-  // .project__card-image
-  // &__image {
-  //   aspect-ratio: 2.2 / 1;
-  //   // aspect-ratio: 1.65/1;
-  //   object-fit: contain;
-  //   object-position: left;
-
-  //   &+div {
-  //     margin-block: .5625em 1.25em;
-  //   }
-  // }
   position: relative;
   padding: 1rem;
 
@@ -486,19 +487,6 @@ body {
 
   transition: all 0.3s ease;
   
-
-  // &:hover,
-  // &:focus {
-  //   background-color: rgb(150 150 150 /.1);
-  // }
-
-  // card:hover {
-
-  //   box-shadow: -10px 10px 0 0 var(—primary)
-    
-  //   transform: translate(10px -10px);
-    
-  //   }
 
   &:hover,
   &:focus-visible {

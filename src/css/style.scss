@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Plus Jakarta Sans:700|Martel Sans:400");
+@import url("https://fonts.googleapis.com/css?family=Plus Jakarta Sans:700|Lexend:wght@100..900&display=swap");
 
 /* SCSS Variables */
 // Spacing 
@@ -10,7 +10,7 @@ $bp-medium: 62em;
 // large -> super large
 $bp-large: 72em;
 // Typography 
-$font-family-body: "Martel Sans", sans-serif;
+$font-family-body: "Lexend", sans-serif;
 $font-family-heading: "Plus Jakarta Sans";
 $font-size-sm: clamp(0.8rem, 0.19vw + 0.75rem, 0.89rem);
 $font-size-base: clamp(1rem, 0.4vw + 0.9rem, 1.19rem);
@@ -66,6 +66,10 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+img {
+  aspect-ratio: attr(width) / attr(height);
+}
+
 img,
 picture,
 video,
@@ -74,6 +78,8 @@ svg {
   display: block;
   max-width: 100%;
 }
+
+
 
 input,
 button,
@@ -102,6 +108,10 @@ h5 {
 }
 
 // extra initial style reset
+ul {
+  padding-inline-start: 1rem;
+}
+
 ul[class] {
    padding-inline-start: 0;
 }
@@ -347,7 +357,7 @@ body {
     object-fit: cover;
     object-position: center 25%;
     border-radius: 1rem;
-    aspect-ratio: 4/3;
+    // aspect-ratio: 4/3;
   }
 }
 

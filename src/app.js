@@ -6,7 +6,7 @@
  */
 const introductionTypes = {
   short: `
-  <p>Hi! I'm Chee Kian Teoh, a frontend developer who led the frontend project at <a href="https://www.nfinitenano.com/" target="_blank">Nfinite Nanotech</a>. I thrive on problem-solving and enjoy building from scratch. My core values: caring, curiosity and have desire to improve. Tech can be daunting, but my eagerness to learn helps me adapts. My goal? Keep growing as a frontend developer and be solid team player anywhere.</p>
+  <p>I'm Chee Kian Teoh, a frontend developer who led the frontend project at <a href="https://www.nfinitenano.com/" target="_blank">Nfinite Nanotech</a>. I thrive on problem-solving and enjoy building from scratch. My core values: caring, curiosity and have desire to improve. Tech can be daunting, but my eagerness to learn helps me adapts. My goal? Keep growing as a frontend developer and be solid team player anywhere.</p>
   `,
   long: `
   <p>Hello there! I'm Chee Kian Teoh, a frontend developer who takes joy in solving problems and building things from the ground up. I taught myself web development and landed a job with a startup, where I lead a project to create a cool user interface for a machine. It's been an amazing journey! 😄</p>
@@ -49,7 +49,10 @@ function populateIntroduction(introductionType = "short") {
 
   toggleState();
   const content = introductionTypes[currentIntroductionType];
-  $introduction.innerHTML = content;
+
+  if ($introduction) {
+    $introduction.innerHTML = content;
+  }
 }
 
 function toggleState() {

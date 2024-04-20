@@ -103,7 +103,7 @@ h5 {
 
 // extra initial style reset
 ul {
-  // padding-inline-start: 0;
+   padding-inline-start: 0;
 }
 
 button,
@@ -147,30 +147,38 @@ small {
   // Typography
   text-transform: capitalize;
   // Colors
-  color: var(--background);
-  background-color: var(--primary);
+  color: var(--accent);
+  background-color: transparent;
   // Others
-  border-color: transparent;
   border-radius: 10px;
-  border: 2px solid var(--primary);
+  border: 2px solid var(--accent);
 }
 
-@mixin button-interact-style {
-  background-color: transparent;
-  color: var(--accent);
-  border-color: var(--accent);
+@mixin button-hover {
+  background-color: rgba(150 150 150 / .1);
 }
+
+@mixin button-clicked {
+  background-color: var(--primary);
+  color: var(--background);
+  border-color: var(--primary);
+}
+
 
 button {
   @include button;
 
-  &:hover,
-  &:focus {
-    @include button-interact-style;
-  }
-
   &--full-width {
     width: 100%;
+  }
+
+  &:hover,
+  &:focus-visible {
+    @include button-hover;
+  }
+
+  &.clicked {
+    @include button-clicked;
   }
 }
 
@@ -186,7 +194,7 @@ a {
 
     &:hover,
     &:focus {
-      @include button-interact-style;
+      @include button-hover;
     }
   }
 }
@@ -251,9 +259,6 @@ body {
   order: -1;
 }
 
-.clicked {
-  @include button-interact-style;
-}
 
 
 // block

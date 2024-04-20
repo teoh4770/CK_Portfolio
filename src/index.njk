@@ -32,7 +32,13 @@ layout: "base.njk"
             class="reverse">
             {# the control #}
             <button class="intro-button clicked" id="short">short</button>
-            <article class="introduction"></article>
+            <button class="intro-button" id="long">long</button>
+            <article class="introduction">
+              <p>Hi! I'm Chee Kian Teoh, a frontend developer who led the frontend project at
+                <a href="https://www.nfinitenano.com/" target="_blank">Nfinite Nanotech</a>. I thrive on problem-solving and enjoy
+                  building from scratch. My core values: caring, curiosity and have desire to improve. Tech can be daunting, but my
+                  eagerness to learn helps me adapts. My goal? Keep growing as a frontend developer and be solid team player anywhere.</p>
+            </article>
           </div>
         </div>
       </section>
@@ -55,7 +61,8 @@ layout: "base.njk"
       <!-- project section: title, a short description, and 3 - 5 projects showcase-->
       <section class="container">
         <h3 class="section-title">What I have been working on</h3>
-        <p class="section-description">I like to spend my free time learning and doing project. Take a look at some of the works I dedicated my time to.</p>
+        <p class="section-description">I like to spend my free time learning and doing project. Take a look at some of the works
+          I dedicated my time to.</p>
         <div class="projects">
           {%- for project in collections.project | reverse -%}
             {% include 'project-snippet.njk' %}

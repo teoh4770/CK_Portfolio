@@ -18,7 +18,9 @@ layout: "base.njk"
         </div>
       </div>
     </div>
-    <div class="hero__bottom-section">
+    <div
+      class="hero__bottom-section">
+      {# my profile image #}
       <img class="hero__image" src="/assets/profile-image.webp" alt="my profile image">
         <div class="socials" data-position="bottom">
           <div class="socials-component">
@@ -28,8 +30,7 @@ layout: "base.njk"
               {%- endfor -%}
             </div>
           </div>
-          <div
-            class="reverse">
+          <div>
             {# the control #}
             <button class="intro-button clicked" id="short">short</button>
             <button class="intro-button" id="long">long</button>

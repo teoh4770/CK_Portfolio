@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Author: Chee Kian Teoh's frontend developer portfolio homepage that tells us who he is, and showcase his projects">
-  <title>{{title}}</title>
-  <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
-  <script src="/app.js" defer></script>
-</head>
-<body>
-  {% include "Header.njk" %}
-  <main class="main-section even-row-space">
-    {{ content | safe }}
-  </main>
-  {% include "Footer.njk" %}
-</body>
-
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+      name="description"
+      content="Author: Chee Kian Teoh's frontend developer portfolio homepage that tells us who he is, and showcase his
+        projects">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ '/css/style.css' | url }}">
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    {% include "Header.njk" %}
+    <main class="main-section even-row-space">
+      {{ content | safe }}
+    </main>
+    {% include "Footer.njk" %}
+    <button class="button--scroll-top" id="scroll-top">
+      <img src="/assets/icons/arrow-up.png" alt="">
+    </button>
+  </body>
 </html>

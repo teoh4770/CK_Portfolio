@@ -21,6 +21,7 @@ let currentIntroductionType = "short";
 // DOM
 const $introductionButtons = document.querySelectorAll(".intro-button");
 const $introduction = document.querySelector(".introduction");
+const $scrollTopButton = document.getElementById("scroll-top")
 
 // Event listeners
 $introductionButtons.forEach($button => {
@@ -28,6 +29,8 @@ $introductionButtons.forEach($button => {
     populateIntroduction(e.currentTarget.id);
   })
 })
+
+$scrollTopButton.onclick = scrollToTop;
 
 // App
 app();
@@ -59,4 +62,8 @@ function toggleState() {
       $button.classList.add(CLICKED_CLASS);
     }
   })
+}
+
+function scrollToTop() {
+  window.scrollTo(0, 0);
 }

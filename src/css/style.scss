@@ -184,6 +184,33 @@ button {
   }
 }
 
+.button--scroll-top {
+  $offset: 1.25rem;
+
+  all: unset;
+
+  position:fixed;
+  right: $offset;
+  bottom: $offset;
+
+  aspect-ratio: 1;
+  width: 1.5rem;
+  padding: .75rem;
+
+  background-color: white;
+  
+  border-radius: 50%;
+  filter: invert(100);
+  cursor: pointer;
+
+  &:hover,
+  &:focus-visible {
+    background-color: inherit;
+    outline: 1px solid white;
+    outline-offset: 2px;
+  }
+}
+
 a {
   display: inline-block;
   cursor: pointer;

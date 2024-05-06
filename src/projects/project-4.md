@@ -32,6 +32,7 @@ projectList: [
     projectLive: "https://inspiring-cranachan-7f7f91.netlify.app/",
   }
 ]
+date: 2024-01-01
 ---
 
 <article class="portfolio-page container">

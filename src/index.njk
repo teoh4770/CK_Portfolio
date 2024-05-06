@@ -66,7 +66,8 @@ layout: "base.njk"
         <p class="section-description">I like to spend my free time learning and doing project. Take a look at some of the works
           I dedicated my time to.</p>
         <div class="projects">
-          {%- for project in collections.project | reverse -%}
+          {# for project in collections.project | reverse #}
+          {%- for project in collections.project -%}
             {% include 'project-snippet.njk' %}
           {%- endfor -%}
         </div>

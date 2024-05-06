@@ -49,7 +49,12 @@ date: 2024-01-01
 
   To me, learning only happens when I engage with the materials and use the knowledge myself. Therefore, hands-on learning plays a significant role in my coding journey. During my free time, I enjoy working on frontend challenges to enhance my fundamental skills as a frontend developer. I choose two platforms, namely Frontend Mentor and Frontend Practice, which provide a collection of real-world design mockups for me to recreate.
 
-  <img src="/assets/portfolio/portfolio2/image1.webp" alt="the landing page of the makeup artist website">
+  
+
+  <figure>
+    <img src="/assets/portfolio/portfolio2/image1.webp" alt="Collections of my works with Frontend Mentor">
+    <figcaption>Collections of my works with Frontend Mentor and Frontend Practice</figcaption>
+  </figure>
 
   **What did I build the projects with?**
   - HTML
@@ -77,10 +82,10 @@ date: 2024-01-01
   {%- endfor -%}
   </ul>
 
-
-
-<img src="/assets/portfolio/portfolio2/image2.webp" alt="the landing page of Backstage Talks Magazine Archive Mock Up">
-<small>A little sneak peek of my Backstage Talks Mock Up Project</small>
+  <figure>
+    <img src="/assets/portfolio/portfolio2/image2.webp" alt="the landing page of Backstage Talks Magazine Archive Mock Up">
+    <figcaption>A little sneak peek of my Backstage Talks Mock Up Project</figcaption>
+  </figure>
 </div>
 
 ### Web Stack and Explanation

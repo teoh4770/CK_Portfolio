@@ -23,7 +23,12 @@ date: 2024-01-01
 
   This makeup artist portfolio website is a multi-page web platform that serves as an online portfolio and a marketing tool for my sister, who specializes in hairstyling and makeup artistry.
 
-  <img src="/assets/portfolio/portfolio1/image1.webp" alt="the landing page of the makeup artist website">
+  
+  <figure>
+    <img src="/assets/portfolio/portfolio1/image1.webp" alt="the landing page of the makeup artist website">
+    <figcaption>The landing page of the makeup artist website</figcaption>
+  </figure>
+  
 
   **What did I build it with?**
   - HTML and CSS for the responsive frontend design.
@@ -35,11 +40,15 @@ date: 2024-01-01
 
 ### Project Purpose and Goals
 <div class="wrapper" markdown="1">
-The aim of this project is to establish a professional online presence for my sister, with the intention of attracting potential clients, displaying her portfolio of work, and promoting her services effectively.  
+  The aim of this project is to establish a professional online presence for my sister, with the intention of attracting potential clients, displaying her portfolio of work, and promoting her services effectively.  
 
-The primary objectives are: showcasing a gallery of her makeup artistry to highlight her skills and talent, offering comprehensive details about her background, skills, and contact information, and designing a visually engaging, user-friendly website that shows her unique style and professionalism.
+  The primary objectives are: showcasing a gallery of her makeup artistry to highlight her skills and talent, offering comprehensive details about her background, skills, and contact information, and designing a visually engaging, user-friendly website that shows her unique style and professionalism.
 
-<img src="/assets/portfolio/portfolio1/image3.webp" alt="the profile page of the makeup artist website, telling the customers the reasons to work with her">
+  <figure>
+    <img src="/assets/portfolio/portfolio1/image3.webp" alt="the landing page of the makeup artist website">
+    <figcaption>The profile page of the makeup artist website, convincing the customers the reasons to work with her</figcaption>
+  </figure>
+
 </div>
 
 ### Web Stack and Explanation
@@ -67,7 +76,11 @@ Simultaneously, I aimed to ensure the website's mobile responsiveness to reach a
 
 Upon completing the website, I noticed that it loaded slowly. The culprit was the media assets, such as images and videos, which hindered the site's performance as browsers struggled to render them. To address this issue, I optimized the media assets using tools like Squoosh for image compression and employed Cloudinary for efficient storage and delivery of videos.
 
-<img src="/assets/portfolio/portfolio1/image2.webp" alt="the images of my sister's bridal and makeup works">
+<figure>
+    <img src="/assets/portfolio/portfolio1/image2.webp" alt="the images of my sister's bridal and makeup works">
+    <figcaption>The images of my sister's bridal and makeup works</figcaption>
+  </figure>
+
 </div>
 
 ### Lessons Learned

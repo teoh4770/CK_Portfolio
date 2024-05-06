@@ -30,8 +30,10 @@ date: 2024-01-01
   
   During the summer of 2022, I had the privilege of interning at Nfinite Nanotech in Waterloo, Ontario. working as an Human Machine Interface Developer (HMI Developer, another branch of frontend developer). 
 
-  <img src="/assets/portfolio/portfolio3/thumbnail.webp" alt="nfinite nanotech logo">
-  <small>Nfinite Nanotech, based in Waterloo Ontario</small>
+  <figure>
+    <img src="/assets/portfolio/portfolio3/thumbnail.webp" alt="nfinite nanotech logo">
+    <figcaption>Nfinite Nanotech, based in Waterloo Ontario</figcaption>
+  </figure>
 
 </div>
 
@@ -49,9 +51,11 @@ date: 2024-01-01
 
   I also spent a good chunk of my time learning the HMI programming language, which had its own tricky API. To get the hang of it, I built and documented the HMI system, making sure to cover the API parts we needed for the project. This helped us work better as a team and made the development process smoother.
   
-  <img src="/assets/portfolio/portfolio3/image2.webp" alt="the overview look of the HMI interface itself">
-  <small>The overview look of the HMI interface itself</small>
-
+  <figure>
+    <img src="/assets/portfolio/portfolio3/image2.webp" alt="The front page of the HMI documentation">
+    <figcaption>The front page of the HMI documentation</figcaption>
+  </figure>
+  
 </div>
 
 ### The Results?
@@ -59,8 +63,10 @@ date: 2024-01-01
 
   By the end of the internship, I manage to complete the interface within 4 months. The newly created HMI significantly enhanced the user interface and experience, making data integration and interaction smoother and more efficient. It also passed rigorous usability and safety evaluation, meeting the high standards set by the engineering team. Overall, after 70 releases and more than 120 commits, the engineering team manage to work and test the machine with ease. It was a job well done according to them, and I was proud to have played a part in it.
 
-  <img src="/assets/portfolio/portfolio3/image1.webp" alt="the front page of the HMI documentation">
-  <small>The front page of the HMI documentation</small>
+  <figure>
+    <img src="/assets/portfolio/portfolio3/image1.webp" alt="The overview look of the HMI interface itself">
+    <figcaption>The overview look of the HMI interface itself</figcaption>
+  </figure>
 
 </div>
 

@@ -37,7 +37,7 @@ date: 2024-01-01
 
 <article class="portfolio-page container">
 
-## Personal Projects
+## {{title}}
 
 <div class="wrapper" markdown="1">
 

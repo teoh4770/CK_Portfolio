@@ -7,27 +7,27 @@ description: Compilation of frontendmentor.io and frontendpractice.com challeng
 buttonText: View Projects
 projectList: [
   {
-    projectName: "Tip Calculator",
-    projectRepo: "https://github.com/teoh4770/tips-calc-app",
-    projectLive: "https://teoh4770.github.io/tips-calc-app/",
+    projectName: "Splitter - Tip Calculator",
+    projectRepo: "https://github.com/teoh4770/Splitter",
+    projectLive: "https://teoh4770.github.io/Splitter/",
   },
   {
     projectName: "Password Generator",
-    projectRepo: "https://github.com/teoh4770/fm-password-generator-app",
-    projectLive: "https://teoh4770.github.io/fm-password-generator/",
+    projectRepo: "https://github.com/teoh4770/Password-Generator",
+    projectLive: "https://teoh4770.github.io/Password-Generator/",
   },
   {
     projectName: "Backstage Talks Magazine Archive Mock Up",
-    projectRepo: "https://github.com/teoh4770/FP-backstage-talks-magazine-archive-mock-up",
-    projectLive: "https://teoh4770.github.io/FP-backstage-talks-magazine-archive-mock-up/",
+    projectRepo: "https://github.com/teoh4770/Backstage_Talks_Magazine_Archive",
+    projectLive: "https://teoh4770.github.io/Backstage_Talks_Magazine_Archive/",
   },
   {
-    projectName: "Google Calculator",
-    projectRepo: "https://github.com/teoh4770/fm-calculator",
-    projectLive: "https://teoh4770.github.io/fm-calculator/",
+    projectName: "Calculator",
+    projectRepo: "https://github.com/teoh4770/Calculator",
+    projectLive: "https://teoh4770.github.io/Calculator/",
   },
   {
-    projectName: "Quizzical: a small quiz app (made with React)",
+    projectName: "Quizzical - Quiz Web App",
     projectRepo: "https://github.com/teoh4770/Quizzical",
     projectLive: "https://inspiring-cranachan-7f7f91.netlify.app/",
   }
@@ -43,7 +43,7 @@ date: 2024-01-01
 
   <div class="portfolio-page__links" markdown="1">
 
-    Link to: [My Personal Project List on Github](https://github.com/stars/teoh4770/lists/mock-up-projects)  
+    Where the fun and learning happens ~
 
     </div> 
 
